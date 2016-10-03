@@ -51,7 +51,7 @@ function addDie() {
     var die = document.createElement('div');
     var value = Math.floor((Math.random()*6)+1);
     die.className = "Die";
-    die.style.color = 'white';
+    die.style.color = 'black';
     //styling die
     die.style.backgroundImage="url('http://www.quarter-sawnflooring.com/images/curly-Cherry.jpg')";
     die.style.height='50px';
@@ -73,7 +73,7 @@ function reRollDice() {
     var die = document.createElement('div');
     var value = Math.floor((Math.random()*6)+1);
     die.className = "Die";
-    die.style.color = 'white';
+    die.style.color = 'black';
     //styling die
     die.style.backgroundImage="url('http://www.quarter-sawnflooring.com/images/curly-Cherry.jpg')";
     die.style.height='50px';
