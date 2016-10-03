@@ -63,24 +63,42 @@ function addDie() {
     die.value = Math.floor((Math.random()*6)+1);
     //increase counter everytime you addDie
     counter++;
-    //assign counter as the id
-    die.id = counter;
     //put the die on the page
     document.body.appendChild(die);
     die.innerHTML = die.value;
-    // assign new value to the die when the roll die button is clicked.
-        function rollDice () {
-            var value = Math.floor((Math.random()*6)+1);
-            this.innerHTML = this.value;
-                
-        } // end of rollDice
-            }; // end of addDie function
+    }; // end of addDie function
 
-function rollAllDice (item,index,arr) {
-            var diceList = document.getElementsByClassName ("Die");
-            diceList[index] = Math.floor((Math.random()*6)+1);
-            this.innerHtml = Math.floor((Math.random()*6)+1);
-       
+function reRollDice() {
+    //creating square
+    var die = document.createElement('div');
+    var value = Math.floor((Math.random()*6)+1);
+    die.className = "Die";
+    die.style.color = 'white';
+    //styling die
+    die.style.backgroundImage="url('http://www.quarter-sawnflooring.com/images/curly-Cherry.jpg')";
+    die.style.height='50px';
+    die.style.width='50px';
+    die.style.display="inline-block";
+    die.style.margin='10px';
+    die.style.textAlign='center';
+    die.style.lineHeight='50px';
+    die.value = Math.floor((Math.random()*6)+1);
+    //put the die on the page
+    document.body.appendChild(die);
+    die.innerHTML = die.value;
+    }; // end of addDie function
+
+
+            function rollAllDice() {
+                var functionCounter = 0
+                var numDiceCounter = document.getElementsByClassName("Die").length;
+                $('.Die').remove();
+                for (;functionCounter < numDiceCounter; functionCounter++) {
+                reRollDice();
+
+                }
+            } 
+           
 
 // example of forEach loop
 // function myFunction(item,index,arr) {
@@ -91,7 +109,7 @@ function rollAllDice (item,index,arr) {
     // for (i = 0; i < diceList.length; i++) {
     // diceList[i].innerHtml = Math.floor((Math.random()*6)+1);
     //     }
-};//end of rollAllDice      
+      
 
 });///end of document.ready    
     
